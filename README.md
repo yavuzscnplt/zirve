@@ -19,6 +19,8 @@ geliştirdiğim **kişisel bir araç** — ama gerçek mühendislik kararlarıyl
 > kişisel baseline ölçümleri **dahil değildir** — hiçbir kişisel sağlık verisi
 > depoda yer almaz. Local-first: tüm veri kullanıcının cihazında kalır.
 
+![Zirve — Ana Sayfa](docs/screenshots/01-dashboard.png)
+
 **Stack:** Electron 34 · React 19 · TypeScript (strict) · electron-vite (Vite 5) · sql.js (WASM SQLite) · Claude Agent SDK · `claude-opus-4-8` (vision) · recharts · electron-builder
 
 ---
@@ -64,6 +66,29 @@ analizi** gibi somut problemlerin nasıl çözüldüğüdür.
 
 Hedefler çoklu seçilebilir: **kas kazanma · yağ yakma · kilo verme · omurga
 sağlığı · esneklik · patlayıcı güç · niş spor.**
+
+---
+
+## 📸 Ekran görüntüleri
+
+**AI antrenman programı** — hedef seç, kullanıcı verisine göre yapılandırılmış haftalık program üretilir:
+
+![Program](docs/screenshots/02-program.png)
+
+**AI beslenme programı** — BMR/TDEE hesabı + hedefe göre kalori/makro/öğün planı:
+
+![Beslenme](docs/screenshots/03-nutrition.png)
+
+**Trend grafikleri** — kilo/yağ/kas/BMI/su zaman serileri (recharts):
+
+![Grafikler](docs/screenshots/04-charts.png)
+
+**Ölçüm girişi & geçmiş** — 19 alanlı tartı ölçümü + geçmiş kayıtlar:
+
+![Ölçümler](docs/screenshots/05-measurements.png)
+
+> Ekran görüntülerindeki sayısal veriler örnek/geliştirme verisidir; beden
+> fotoğrafı içeren ekranlar (Fotoğraflar, Analiz) bilinçli olarak dahil edilmemiştir.
 
 ---
 
