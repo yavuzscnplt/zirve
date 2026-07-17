@@ -1,0 +1,20 @@
+appId: com.yavuz.zirve
+productName: Zirve
+directories:
+  output: dist
+# asar kapalı: sql.js WASM ve Agent SDK ikili dosyası dosya sisteminden
+# okunabilsin/çalıştırılabilsin (asar içinden native binary çalıştırılamaz).
+asar: false
+files:
+  - out/**
+  - '!**/*.map'
+win:
+  target:
+    - nsis
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: Zirve

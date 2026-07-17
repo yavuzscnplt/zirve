@@ -1,0 +1,31 @@
+# --- bağımlılıklar & derleme çıktısı ---
+node_modules/
+app/node_modules/
+out/
+app/out/
+dist/
+app/dist/
+*.log
+
+# --- ortam & gizli ---
+.env
+.env.*
+!.env.example
+
+# --- yerel makine ayarları (kişiye özel izin listesi) ---
+.claude/settings.local.json
+
+# --- yerel veritabanı (kullanıcı verisi userData'da tutulur) ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- KİŞİSEL SAĞLIK VERİSİ — asla commit edilmez (bkz. CLAUDE.md) ---
+# Beden/ölçüm fotoğrafları ve tarih klasörleri cihazda kalır.
+/14.06.25/
+/16.03.2026/
+/Fotoğraflar/
+
+# --- OS / editör ---
+.DS_Store
+Thumbs.db
