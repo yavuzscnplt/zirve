@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactElement } from 'react'
 import type { ProgramDay, ProgramFull } from '@shared/types'
+import { Markdown } from '../../components/Markdown'
 
 const GOALS = [
   'Kas kazanma',
@@ -143,7 +144,7 @@ export function ProgramPage(): ReactElement {
                 </button>
               </div>
             </div>
-            {p.content && <p className="prog__overview">{p.content}</p>}
+            {p.content && <Markdown className="prog__overview" text={p.content} />}
             <ProgramDays days={p.days} />
           </section>
         ))

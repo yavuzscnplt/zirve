@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type ReactElement } from 'react'
 import type { Goal, Measurement, NutritionPlan, ProgramFull, WorkoutSessionFull } from '@shared/types'
 import { ProgramDays } from '../program/ProgramPage'
+import { Markdown } from '../../components/Markdown'
 
 const GOAL_METRICS: Array<{ key: keyof Measurement; label: string; unit: string }> = [
   { key: 'weight_kg', label: 'Kilo', unit: 'kg' },
@@ -229,7 +230,7 @@ export function DashboardPage(): ReactElement {
           {program ? (
             <>
               <div className="active__title">{program.title}</div>
-              {program.content && <p className="prog__overview">{program.content}</p>}
+              {program.content && <Markdown className="prog__overview" text={program.content} />}
               <ProgramDays days={program.days} />
             </>
           ) : (
@@ -262,7 +263,7 @@ export function DashboardPage(): ReactElement {
           {nutrition ? (
             <>
               <div className="active__title">{nutrition.title}</div>
-              <div className="report">{nutrition.content}</div>
+              <Markdown className="report" text={nutrition.content} />
             </>
           ) : (
             <p className="empty">

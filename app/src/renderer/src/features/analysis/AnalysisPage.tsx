@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type ReactElement } from 'react'
 import type { Analysis, ClientPhoto } from '@shared/types'
+import { Markdown } from '../../components/Markdown'
 
 export function AnalysisPage(): ReactElement {
   const [photos, setPhotos] = useState<ClientPhoto[]>([])
@@ -146,7 +147,7 @@ export function AnalysisPage(): ReactElement {
                 Sil
               </button>
             </div>
-            <div className="report">{a.report}</div>
+            <Markdown className="report" text={a.report} />
           </section>
         ))
       )}

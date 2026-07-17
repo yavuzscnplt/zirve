@@ -817,6 +817,87 @@ body {
   color: var(--text);
 }
 
+/* Markdown render (AI çıktısı) — .report/.prog__overview taban tipografisini
+   miras alır; white-space markdown bloklarını bozmasın diye normal'e döner. */
+.md {
+  white-space: normal;
+}
+.md > :first-child {
+  margin-top: 0;
+}
+.md > :last-child {
+  margin-bottom: 0;
+}
+.md__h {
+  color: var(--text);
+  line-height: 1.3;
+  margin: 14px 0 6px;
+}
+.md__h1 {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+.md__h2 {
+  font-size: 1.05em;
+  font-weight: 700;
+}
+.md__h3 {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--accent);
+}
+.md__p {
+  margin: 0 0 10px;
+}
+.md__ul,
+.md__ol {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+.md__ul li,
+.md__ol li {
+  margin: 2px 0;
+}
+.md code {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 1px 5px;
+  font-size: 0.9em;
+}
+.md__hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 12px 0;
+}
+.md__quote {
+  margin: 0 0 10px;
+  padding: 6px 12px;
+  border-left: 3px solid var(--accent);
+  background: var(--panel-2);
+  border-radius: 0 8px 8px 0;
+  color: var(--muted);
+}
+.md__tablewrap {
+  overflow-x: auto;
+  margin: 0 0 10px;
+}
+.md__table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92em;
+}
+.md__table th,
+.md__table td {
+  border: 1px solid var(--border);
+  padding: 5px 9px;
+  text-align: left;
+}
+.md__table th {
+  background: var(--panel-2);
+  font-weight: 600;
+}
+
 /* Yapılandırılmış program günleri */
 .prog__overview {
   font-size: 13px;

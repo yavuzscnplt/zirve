@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactElement } from 'react'
 import type { Measurement, ProgressReview } from '@shared/types'
+import { Markdown } from '../../components/Markdown'
 
 interface MetricDef {
   key: keyof Measurement
@@ -128,7 +129,7 @@ export function ProgressPage(): ReactElement {
               Sil
             </button>
           </div>
-          <div className="report">{r.content}</div>
+          <Markdown className="report" text={r.content} />
         </section>
       ))}
     </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactElement } from 'react'
 import type { NutritionPlan } from '@shared/types'
+import { Markdown } from '../../components/Markdown'
 
 const GOALS = [
   'Yağ yakma',
@@ -168,7 +169,7 @@ export function NutritionPage(): ReactElement {
                 </button>
               </div>
             </div>
-            <div className="report">{p.content}</div>
+            <Markdown className="report" text={p.content} />
           </section>
         ))
       )}

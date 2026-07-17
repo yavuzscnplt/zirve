@@ -6,6 +6,7 @@ import {
   type ReactElement
 } from 'react'
 import type { Chat, ChatMessage } from '@shared/types'
+import { Markdown } from '../../components/Markdown'
 
 const SUGGESTIONS = [
   'Son durumumu değerlendir, ne yapmalıyım?',
@@ -152,7 +153,7 @@ export function CoachPage(): ReactElement {
 
           {messages.map((m) => (
             <div key={m.id} className={`bubble bubble--${m.role}`}>
-              {m.text}
+              {m.role === 'coach' ? <Markdown text={m.text} /> : m.text}
             </div>
           ))}
 
